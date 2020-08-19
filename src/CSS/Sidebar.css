@@ -1,0 +1,25 @@
+.sidebar{
+    flex: 0.20;
+    width: 139px;
+    left: 1;
+    margin-top: 10px;
+  
+   height: 900px;
+   overflow-y: auto;
+    
+    height: 100vh;
+}
+
+
+.sidebar_options{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+}
+
+.sidebar_options > p{
+   margin-right: 40px;
+}
+
+

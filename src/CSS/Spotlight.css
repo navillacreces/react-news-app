@@ -1,0 +1,10 @@
+.spotlight{
+    height: 460px;
+    width: 330px;
+    background-color: #fafafa;
+    border: 2px solid #eee;
+    margin-top: 13px;
+    border-radius: 34px;
+    padding: 5px;
+    padding-left: 5px;
+}

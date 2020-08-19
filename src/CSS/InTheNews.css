@@ -1,0 +1,28 @@
+.inTheNews{
+    height: 270px;
+    width: 330px;
+    background-color: #fafafa;
+    margin-top: 13px;
+    border-radius: 34px;
+    border: 2px solid #eee;
+    
+}
+
+.button-flex-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+button{
+    
+    margin-top:13px;
+    margin-bottom: 3px;
+    margin-left: 3px;
+    font-weight: lighter;
+    background-color: white;
+    height: 30px;
+    border: 1px solid grey;
+    border-radius: 34px;
+}

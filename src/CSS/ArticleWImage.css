@@ -1,0 +1,15 @@
+.articleW{
+    display: flex;
+    align-items: center;
+}
+
+.articleW > p{
+    font-size: small;
+}
+
+.articleW > img{
+    object-fit: contain;
+    height: 50px;
+    width: 50px;
+    padding-left: 10px;
+}

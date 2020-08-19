@@ -1,0 +1,99 @@
+.weatherbox{
+    height: 366px;
+    width: 330px;
+    background-color: #fafafa;
+    margin-top: 30px;
+    border: 2px solid #eee;
+    border-radius: 34px;
+    
+}
+
+.wb_location{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 5px;
+}
+
+
+.weather-flex{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+
+.icon_list{
+    list-style-type: none;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0px;
+}
+
+.icon_list > li {
+    
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+.icon_list > li > p{
+    padding-left: 0px;
+}
+
+.list{
+    list-style-type: none;
+}
+
+.list >li{
+    display: inline;
+    
+}
+
+
+.now{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.now__icon{
+    height: 50px;
+    width: 50px;
+    padding-left: 30px;
+    margin-left: 40px;
+    padding-top: 30px;
+}
+
+h3{
+    color: orange;
+}
+
+
+
+.this_week{
+    display: flex;
+    /*height: 180px;*/
+    
+    flex-direction: column;
+    
+}
+
+
+
+.now_details{
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+}
+.wb_location > p{
+    font-size: 16px;
+    margin-right: 80px;
+}
+

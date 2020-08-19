@@ -1,0 +1,9 @@
+.sideHeadlines{
+    height: 485px;
+    width: 330px;
+    background-color: #fafafa;
+    border-radius: 34px;
+    border: 2px solid #eee;
+    margin-top: 13px;
+    padding: 5px;
+}

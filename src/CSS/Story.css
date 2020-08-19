@@ -1,0 +1,32 @@
+.story{
+    border: 2px solid #eee;
+    width: 630px;
+    max-height: 300px;
+    margin-left: auto;
+    margin-right: 40px;
+    display: flex;
+    border-radius: 13px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.story__source{
+    
+    
+    color: gray;
+}
+
+li{
+    font: lighter;
+
+}
+
+
+.test_image{
+    height: 130px;
+    width: 95px;
+    object-fit: contain;
+    margin-left: 30px;
+    margin-right: 30px;
+   
+}

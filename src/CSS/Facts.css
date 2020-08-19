@@ -1,0 +1,9 @@
+.facts{
+    height: 320px;
+    width: 330px;
+    background-color: #fafafa;
+    margin-top: 13px;
+    border-radius: 34px;
+    border: 2px solid #eee;
+    padding: 3px;
+}
