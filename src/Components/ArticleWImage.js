@@ -1,14 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react'
 import '../CSS/ArticleWImage.css';
 
-
-function ArticleWImage(props) {
-    return (
-        <div className="articleW">
-            <p>{props.title}</p>
-            <img src={props.urlToImage} alt="articleImage" />
-        </div>
-    )
+export default class ArticleWImage extends Component {
+    render() {
+        return (
+            <div className="articleW">
+                <p>{this.props.title}</p>
+                <img src={this.props.urlToImage} alt="articleImage" />
+            </div>
+        )
+    }
 }
-
-export default ArticleWImage

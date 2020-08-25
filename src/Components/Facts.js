@@ -2,6 +2,7 @@ import React from 'react'
 import '../CSS/Facts.css';
 import { v4 as uuidv4 } from 'uuid';
 import Article from './Article';
+import NewsContext from "./NewsContext"
 
 
 export default class Facts extends React.Component {
@@ -10,17 +11,19 @@ export default class Facts extends React.Component {
         super(props);
         this.state = {};
     }
+
+    static contextType = NewsContext;
     render() {
 
-        const x = this.props.articles;
         
+        console.log(this.context.factArticles)
 
 
         return (
             <div className="facts">
                 <p>Fact Check</p>
                 <hr/>
-                {x.map(article =>{
+                {this.context.factArticles.map(article =>{
                     return <Article key={uuidv4()} {...article}  />
                 })}
             </div>

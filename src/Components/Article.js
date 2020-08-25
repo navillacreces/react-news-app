@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react'
 import '../CSS/Article.css';
+import NewsContext from './NewsContext'
 
-function Article(props) {
-  
+export default class Article extends Component {
+
+    constructor(props){
+        super(props);
+        this.state={}
+    }
+
+    static contextType = NewsContext
+
     
-
-    return (
-        <div className="article">
-            <p>{props.title}</p>
-        </div>
-    )
+    render() {
+        return (
+            <div class="article">
+                <p>{this.props.title}</p>
+                
+            </div>
+        )
+    }
 }
-
-export default Article

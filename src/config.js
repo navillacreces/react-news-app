@@ -1,3 +1,3 @@
 export default{
-    APIKEY : process.env.NEWS_API_KEY
+    REACT_APP_KEY: process.env.REACT_APP_KEY
 }

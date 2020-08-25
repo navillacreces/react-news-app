@@ -19,10 +19,10 @@ class InfoBar extends React.Component {
     return (
         <div className="infoBar">
            <WeatherBox />
-           <Facts articles={this.props.factArticles}/>
-           <SideHeadlines articles={this.props.beyondArticles} />
-           <Spotlight articles={this.props.spotlightArticles} />
-            <InTheNews />
+           <Facts />
+           <SideHeadlines  />
+           <Spotlight />
+            <InTheNews />  
         </div>
     )
     }

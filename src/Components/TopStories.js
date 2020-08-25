@@ -3,6 +3,7 @@ import Covid from '../Components/Covid';
 import Story from './Story';
 import '../CSS/TopStories.css';
 import { v4 as uuidv4 } from 'uuid';
+import NewsContext from '../Components/NewsContext';
 
 
 class TopStories extends React.Component {
@@ -15,19 +16,11 @@ class TopStories extends React.Component {
         };
     }
 
-
+    static contextType = NewsContext;
+    
 
     render(){
       
-        const top3StoriesArray = [this.props.articles[0],this.props.articles[1],this.props.articles[2]];
-        const top3StoriesBusinessArray = [this.props.businessArticles[0],this.props.businessArticles[1],this.props.businessArticles[2]];
-        const top3StoriesTechnologyArray = [this.props.technologyArticles[0],this.props.technologyArticles[1],this.props.technologyArticles[2]];
-        const top3StoriesEntertainmentArray = [this.props.entertainmentArticles[0],this.props.entertainmentArticles[1],this.props.entertainmentArticles[2]];
-        const top3StoriesScienceArray = [this.props.scienceArticles[0],this.props.scienceArticles[1],this.props.scienceArticles[2]];
-        const top3StoriesHealthArray = [this.props.healthArticles[0],this.props.healthArticles[1],this.props.healthArticles[2]];
-        const top3StoriesSportsArray = [this.props.sportsArticles[0],this.props.sportsArticles[1],this.props.sportsArticles[2]];
-
-
     return (
 
         
@@ -36,49 +29,53 @@ class TopStories extends React.Component {
                 Headlines
             </h3>
             <Covid />
-            <h3>
+            
+                <h3>
                 US
             </h3>
-                {top3StoriesArray.map(article=>{
+                {this.context.top3Articles.map(article=>{
                     return <Story key={uuidv4()}  {...article}/>
                 })}
             <h3>
                 Business
             </h3>
-                {top3StoriesBusinessArray.map(article =>{
+             
+            {this.context.business3Articles.map(article =>{
                     return <Story key={uuidv4()} {...article} />
                 })}
             <h3>
                 Technology
             </h3>
-            {top3StoriesTechnologyArray.map(article =>{
+            {this.context.technology3Articles.map(article =>{
                     return <Story key={uuidv4()} {...article} />
                 })}
             <h3>
                 Entertainment
             </h3>
-            {top3StoriesEntertainmentArray.map(article =>{
+            {this.context.entertainment3Articles.map(article =>{
                     return <Story key={uuidv4()}  {...article} />
                 })}
             <h3>
                 Science
             </h3>
             
-            {top3StoriesScienceArray.map(article =>{
+            {this.context.science3Articles.map(article =>{
                     return <Story key={uuidv4()}  {...article} />
                 })}
             <h3>
                 Health
             </h3>
-            {top3StoriesHealthArray.map(article =>{
+            {this.context.health3Articles.map(article =>{
                     return <Story key={uuidv4()}  {...article} />
                 })}
             <h3>
                 Sports
             </h3>
-            {top3StoriesSportsArray.map(article =>{
+            {this.context.sports3Articles.map(article =>{
                     return <Story key={uuidv4()}  {...article} />
                 })}
+        
+            
             
         </div>
     )
