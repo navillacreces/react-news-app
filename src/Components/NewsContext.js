@@ -18,6 +18,7 @@ const NewsContext = React.createContext({
       science3Articles: [],
       healthArticles: [],
       health3Articles: [],
+      coronaArticles: []
 
 });
 

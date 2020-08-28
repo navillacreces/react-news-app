@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../CSS/Sidebar.css';
 import SidebarOption from './SidebarOption';
-
+import {Link} from 'react-router-dom';
 import Language from "@material-ui/icons/Language";
 import Flag from "@material-ui/icons/Flag";
 import Business from "@material-ui/icons/Business";
@@ -22,22 +22,46 @@ export default class Sidebar extends Component {
     render() {
         return (
             <div className="sidebar">
-                
-              <SidebarOption title={"Top Stories"} image={<Language />}/>
+                <Link to ='/' style={{ color: 'black',textDecoration: 'none' }}>
+                    <SidebarOption title={"Top Stories"} image={<Language />}/>
+                </Link>
+              
               <SidebarOption title={"For You"} image={<PersonOutline/>}/>
               <SidebarOption title={"Following"} image={<StarBorder />}/>
               <SidebarOption title={"Saved Searches"} image={<Search />}/>
               <hr />
+              <Link to='/corona' style={{ color: 'black',textDecoration: 'none' }}>
               <SidebarOption title={"Covid-19"} image={<Warning/>}/>
+              </Link>
+             
               <hr/>
-              <SidebarOption title={"US"} image={ <Flag/>} />
+                <Link to='/us' style={{ color: 'black',textDecoration: 'none' }}>
+                    <SidebarOption title={"US"} image={ <Flag/>} />
+                </Link>
+              
               <SidebarOption title={"Your Local News"} image={<LocationOn />}/>
+              
+                
+              <Link to="/business" style={{ color: 'black',textDecoration: 'none' }}>
               <SidebarOption title={"Business"} image={ <Business />} />
-              <SidebarOption title={"Technology"} image={<LaptopMac />}/>
-              <SidebarOption title={"Entertainment"} image={<Theaters/>}/>
-              <SidebarOption title={"Science"} image={<Power />}/>
+              </Link>
+              <Link to='/technology' style={{ color: 'black',textDecoration: 'none' }}>
+                 <SidebarOption title={"Technology"} image={<LaptopMac />}/>
+              </Link>
+              <Link to='/entertainment' style={{ color: 'black',textDecoration: 'none' }}>
+                  <SidebarOption title={"Entertainment"} image={<Theaters/>}/>
+              </Link>
+              <Link to='/science' style={{ color: 'black',textDecoration: 'none' }}>
+                <SidebarOption title={"Science"} image={<Power />}/>
+              </Link>
+              <Link to='/health' style={{ color: 'black',textDecoration: 'none' }}>
               <SidebarOption title={"Heatlh"} image={<LocalHospital />}/>
+              </Link>
+              <Link to='/sports' style={{ color: 'black',textDecoration: 'none' }}>
               <SidebarOption title={"Sports"} image={<SportsFootball />}/>
+              </Link>
+              
+              
               <hr/>
               <div className="sidebar__options">
               <p>Language & region</p>

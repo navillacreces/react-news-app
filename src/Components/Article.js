@@ -11,10 +11,10 @@ export default class Article extends Component {
 
     static contextType = NewsContext
 
-    
+
     render() {
         return (
-            <div class="article">
+            <div className="article">
                 <p>{this.props.title}</p>
                 
             </div>

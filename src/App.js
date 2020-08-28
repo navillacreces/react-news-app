@@ -2,11 +2,17 @@ import React from 'react';
 import Header from './Components/Header';
 import './App.css';
 import config from './config';
-import TopStories from './Components/TopStories';
-import Sidebar from './Components/Sidebar';
-import InfoBar from './Components/InfoBar';
+import Technology from './Components/Technology';
 import NewsContext from './Components/NewsContext';
-
+import {Route} from 'react-router-dom';
+import HomePage from './Components/HomePage';
+import NewsPage from './Components/NewsPage';
+import Business from './Components/Business';
+import Entertainment from './Components/Entertainment';
+import Health from './Components/Health';
+import Sports from './Components/Sports'
+import Science from './Components/Science'
+import Corona from './Components/Corona';
 
 export default class App extends React.Component{
 
@@ -14,26 +20,30 @@ export default class App extends React.Component{
 
   constructor(props){
     super(props);
-    this.state ={
+    this.state = {
 
       articles: [],
-      top3Articles : [],
-      beyondArticles: [],
-      spotlightArticles: [],
-      factArticles: [],
       businessArticles: [],
-      business3Articles : [],
       entertainmentArticles: [],
-      entertainment3Articles: [],
       technologyArticles:[],
-      technology3Articles: [],
       sportsArticles: [],
-      sports3Articles: [],
       scienceArticles: [],
-      science3Articles: [],
       healthArticles: [],
-      health3Articles: []
-     
+      coronaArticles:[],
+        top3Articles : [],
+        beyondArticles: [],
+        spotlightArticles: [],
+        factArticles: [],
+        health3Articles: [],
+        business3Articles : [],
+        entertainment3Articles: [],
+        technology3Articles: [],
+        science3Articles: [],
+        sports3Articles: [],
+
+
+
+      
     }
   }
 
@@ -74,6 +84,7 @@ export default class App extends React.Component{
 
 
     })
+
 
     const forBusiness =  rootUrl + "&category=business" + withKey;
 
@@ -196,7 +207,8 @@ export default class App extends React.Component{
       scienceArticles: this.state.scienceArticles,
       science3Articles : this.state.sports3Articles,
       healthArticles:  this.state.healthArticles,
-      health3Articles: this.state.health3Articles
+      health3Articles: this.state.health3Articles,
+      
      
     };
 
@@ -207,13 +219,18 @@ export default class App extends React.Component{
       <NewsContext.Provider value={contextValue}>
           <div className="App">
             <Header />
+            
               <div className="app-flex">  
-                <Sidebar />
-                
-                  <TopStories />
-                  <InfoBar />
-                      
-                   
+
+              <Route exact path='/' component={HomePage} />
+              <Route path='/corona' component={Corona} />
+              <Route path='/us' component={NewsPage} />
+              <Route path='/business' component={Business} />
+              <Route path='/technology' component={Technology} />
+              <Route path='/entertainment' component={Entertainment} />
+              <Route path='/health' component={Health} />
+              <Route path='/science' component={Science} />
+              <Route path='/sports' component={Sports} />
                    </div>
                 </div>
       </NewsContext.Provider>

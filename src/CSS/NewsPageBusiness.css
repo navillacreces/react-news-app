@@ -1,0 +1,17 @@
+.newspage{
+    flex: 0.65;
+    margin-top: 50px;
+}
+
+.newspage__title{
+   margin-left: 19%;
+}
+
+.newspage__stories{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1{
+    color: black;
+}
