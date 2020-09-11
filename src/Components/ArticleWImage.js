@@ -6,7 +6,8 @@ export default class ArticleWImage extends Component {
         return (
             <div className="articleW">
                 <p>{this.props.title}</p>
-                <img src={this.props.urlToImage} alt="articleImage" />
+                
+                {(this.props.urlToImage === null || this.props.urlToImage === '') ? (<img src={this.props.urlToImage} alt="articleImage" style={{display: 'none'}} />): (<img src={this.props.urlToImage} alt="articleImage" />)}
             </div>
         )
     }

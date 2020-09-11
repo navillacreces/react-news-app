@@ -14,6 +14,7 @@ import Sports from './Components/Sports'
 import Science from './Components/Science'
 import Corona from './Components/Corona';
 
+
 export default class App extends React.Component{
 
 
@@ -221,7 +222,7 @@ export default class App extends React.Component{
             <Header />
             
               <div className="app-flex">  
-
+              
               <Route exact path='/' component={HomePage} />
               <Route path='/corona' component={Corona} />
               <Route path='/us' component={NewsPage} />
@@ -231,6 +232,7 @@ export default class App extends React.Component{
               <Route path='/health' component={Health} />
               <Route path='/science' component={Science} />
               <Route path='/sports' component={Sports} />
+             {/* <Route path='/completeArticle' component={CompleteArticle} />*/} 
                    </div>
                 </div>
       </NewsContext.Provider>

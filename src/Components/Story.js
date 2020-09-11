@@ -20,9 +20,7 @@ class Story extends React.Component {
         <div className="story"> 
             <div className="story__description">
                 <h4>{ (this.props.description === null || this.props.description === '') ? (this.props.title ): (this.props.description)}</h4>
-                
                 <ul>
-                    
                     <li>
                         <p>
                         {this.props.title}
